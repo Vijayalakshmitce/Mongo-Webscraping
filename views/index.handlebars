@@ -1,0 +1,57 @@
+<div class="container">
+      <h1 class="text-centre">MongoScrapping</h1>
+      <h2><i>HUFF PUFF NEWS SCRAPPING</i></h2>
+      <div class ="row">
+     <div class ="col-md-6 col-sm-12">
+      <div id="articles">
+          <article id="articleBox">
+      <ul>
+      {{#each Article}}
+      
+          <ol>
+             <p data-id ='{{this._id}}'>
+               <img src='{{this.image}}' width='150'>{{this.title}}
+                 
+                 <a href='{{this.link}}'>Link</a></p>
+          </ol>
+          {{/each}}
+      </ul>
+      </article>
+      </div>
+      </div>
+      <div class ="col-md-5 col-sm-12">
+      <div id="notes"></div>
+    </div>
+    </div>
+</div>
+    <script type="text/javascript">
+    $(document).on("click","p",function(){
+      $("#notes").empty();
+      
+      var id = $(this).attr("data-id");
+
+      $.ajax({
+          type: "GET",
+          dataType: "json",
+          url: "/article/" + id
+      }).then(function(data){
+        
+        $("#notes").append("<h3>"+data.title+"</h3>");
+        $("#notes").append("<input id='titleinput' name='title'></input>");
+        $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
+         $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+         $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Delete All Note</button>");
+         $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
+
+
+
+
+      });
+      //ajax end clsoure here
+
+
+    });
+    //p click end closure here
+    
+    
+    </script>

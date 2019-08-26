@@ -5,7 +5,7 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/homeWork"
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/homeWork"
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 module.exports = function (app) {

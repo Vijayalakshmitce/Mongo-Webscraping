@@ -4,7 +4,9 @@ var axios = require("axios");
 
 var cheerio = require("cheerio");
 
-mongoose.connect("mongodb://localhost/homeWork", {
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/homeWork";
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true
 });
 

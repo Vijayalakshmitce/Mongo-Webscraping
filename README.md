@@ -34,6 +34,8 @@ saved Articles:
 ![screencapture-still-tundra-48984-herokuapp-savedArticle-2019-08-27-17_48_00](https://user-images.githubusercontent.com/49068436/63810514-e1f3c180-c8f2-11e9-9544-a5efbf05882d.png)
 
 scraping new Articles:
+![screencapture-still-tundra-48984-herokuapp-scrape-2019-08-27-17_51_25](https://user-images.githubusercontent.com/49068436/63810753-837b1300-c8f3-11e9-896e-4c38dbc74ac0.png)
+
 
 
 
